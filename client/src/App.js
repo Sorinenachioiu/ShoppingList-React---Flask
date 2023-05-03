@@ -33,6 +33,12 @@ function App() {
     return cart.reduce((total, item) => total + parseFloat(item.Price), 0).toFixed(2);
   };
 
+  const reset = () => {
+    setSelectedCategory('');
+    setMaxPrice('');
+    setCart([]);
+  };
+
   return (
     <div>
       <h1>Grocery List</h1>
@@ -89,6 +95,9 @@ function App() {
           ))}
         </ul>
         <p>Total: ${cartTotal()}</p>
+        <div>
+        <button onClick={reset}>Reset</button>
+      </div>
       </div>
     </div>
   );
