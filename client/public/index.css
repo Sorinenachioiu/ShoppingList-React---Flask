@@ -1,25 +1,228 @@
 /* public/index.css */
+
+/* Set a base font size and family */
 body {
-    font-family: Arial, sans-serif;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  th, td {
-    padding: 8px;
-    text-align: left;
-    border: 1px solid #ccc;
-  }
-  
-  th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the main heading */
+h1 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+/* Create a container for the grocery list filters */
+.filter-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Style the label and select for the category filter */
+.filter-container label {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.filter-container select {
+  font-size: 1.2rem;
+  padding: 0.25rem;
+}
+
+/* Style the label and input for the max price filter */
+.filter-container input[type="number"] {
+  font-size: 1.2rem;
+  padding: 0.25rem;
+  margin-left: 0.5rem;
+  width: 5rem;
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+/* Style the table header */
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Style even rows */
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Style the "Add to cart" button */
+button {
+  font-size: 1.2rem;
+  padding: 0.25rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+/* Style the shopping cart */
+.shopping-cart {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.shopping-cart h2 {
+  margin-top: 0;
+}
+
+.shopping-cart ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.shopping-cart li {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.shopping-cart li:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Style the reset button */
+.reset-button {
+  margin-top: 1rem;
+}
+
+.reset-button button {
+  font-size: 1.2rem;
+  padding: 0.25rem;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.reset-button button:hover {
+  background-color: #da190b;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.reset-btn {
+  background-color: #f44336;
+}
+
+.reset-btn:hover {
+  background-color: #d32f2f;
+}
+
+select {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-right: 8px;
+  width: 200px;
+}
+
+.category-select,
+input[type="number"] {
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.category-select {
+  width: 120px;
+}
+
+.shopping-cart {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.shopping-cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+  padding: 2px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+.shopping-cart-item-details {
+  margin: 0;
+  font-size: 14px;
+}
+
+.remove-from-cart {
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.remove-from-cart:hover {
+  background-color: #d12e2e;
+}
+
+.shopping-cart-total {
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.shopping-cart-actions {
+  margin-top: 16px;
+}
+
+.shopping-cart-reset {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.shopping-cart-reset:hover {
+  background-color: #3e8e41;
+}

@@ -1,7 +1,9 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 import csv
 from flask_cors import CORS
 import os
+import smtplib
+from email.message import EmailMessage
 
 app = Flask(__name__)
 CORS(app)
