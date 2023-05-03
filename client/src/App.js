@@ -19,12 +19,18 @@ function App() {
   }, []);
 
   const filteredGroceries = () => {
-    return groceries.filter(item =>
-      (!selectedCategory || item.Category === selectedCategory) &&
-      (!maxPrice || parseFloat(item.Price) <= parseFloat(maxPrice)) &&
-      (!selectedBrand || item.Brand === selectedBrand)
-    );
+    return groceries
+      .filter(
+        (item) =>
+          (!selectedCategory || item.Category === selectedCategory) &&
+          (!maxPrice || parseFloat(item.Price) <= parseFloat(maxPrice)) &&
+          (!selectedShop || item.Shop === selectedShop) &&
+          (!selectedName ||
+            item.Name.toLowerCase().startsWith(selectedName.toLowerCase()))
+      )
+      .sort((a, b) => parseFloat(a.Price) - parseFloat(b.Price));
   };
+
   const addToCart = (item) => {
     const existingItem = cart.find((cartItem) => cartItem.ID === item.ID);
     if (existingItem) {
@@ -65,29 +71,34 @@ function App() {
   };
 
   //check
-  const [selectedBrand, setSelectedBrand] = useState('');
+  const [selectedShop, setSelectedShop] = useState('');
+  const [selectedName, setSelectedName] = useState('');
 
   return (
     <div>
       <h1>Grocery List</h1>
       <div>
         <label>
-        <label htmlFor="category-select">Category:</label>
-          <select className="category-select" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
-          <option value="">All</option>
-          <option value="Fruit">Fruit</option>
-          <option value="Vegetable">Vegetable</option>
-        </select>
-        <label htmlFor="brand-select">Brand:</label>
-          <select className="brand-select" value={selectedBrand} onChange={(e) => setSelectedBrand(e.target.value)}>
-            <option value="">All</option>
-            <option value="Gala">Gala</option>
-            <option value="Brand B">Brand B</option>
-          </select>
-        </label>
-        <label>
-        <label htmlFor="max-price-input">Max Price:</label>
-          <input type="number" value={maxPrice} onChange={(e) => setMaxPrice(e.target.value)} />
+          <label htmlFor="name-select">Product Name:</label>
+            <input type="text" value={selectedName} onChange={(e) => setSelectedName(e.target.value)} />
+          <label htmlFor="category-select">Category:</label>
+            <select className="category-select" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
+              <option value="">All</option>
+              <option value="Fruit">Fruit</option>
+              <option value="Vegetable">Vegetable</option>
+            </select>
+          <label htmlFor="Shop-select">Shop:</label>
+            <select className="Shop-select" value={selectedShop} onChange={(e) => setSelectedShop(e.target.value)}>
+              <option value="">All</option>
+              <option value="Gala">Gala</option>
+              <option value="Jumbo">Jumbo</option>
+              <option value="AH">AH</option>
+              <option value="Flink">Flink</option>
+            </select>
+          </label>
+          <label>
+            <label htmlFor="max-price-input">Max Price:</label>
+            <input type="number" value={maxPrice} onChange={(e) => setMaxPrice(e.target.value)} />
         </label>
       </div>
       <table>
@@ -97,7 +108,7 @@ function App() {
             <th>Name</th>
             <th>Category</th>
             <th>Price</th>
-            <th>Brand</th>
+            <th>Shop</th>
             <th>Quantity</th>
             <th>Actions</th>
           </tr>
@@ -108,8 +119,8 @@ function App() {
             <td>{item.ID}</td>
             <td>{item.Name}</td>
             <td>{item.Category}</td>
-            <td>{item.Price}</td>
-            <td>{item.Brand}</td>
+            <td>{item.Price}€</td>
+            <td>{item.Shop}</td>
             <td>{item.Quantity}</td>
             <td>
               <button onClick={() => addToCart(item)}>Add to cart</button>
@@ -126,7 +137,7 @@ function App() {
               <div>
                 <h4>{item.Name}</h4>
                 <p className="shopping-cart-item-details">
-                  {item.Quantity}x {item.Price}
+                  {item.Quantity}x {item.Price}€
                 </p>
               </div>
               <button className="remove-from-cart" onClick={() => removeCartItem(item)}>
@@ -135,7 +146,7 @@ function App() {
             </li>
           ))}
         </ul>
-        <p className="shopping-cart-total">Total: ${cartTotal()}</p>
+        <p className="shopping-cart-total">Total: €{cartTotal()}</p>
         <div className="shopping-cart-actions">
           <button onClick={reset} className="shopping-cart-reset">
             Reset

@@ -1,5 +1,113 @@
-ID,Name,Category,Price,Brand,Quantity
+ID,Name,Category,Price,Shop,Quantity
 1,Bananas,Fruit,0.49,Chiquita,1 lb
 2,Apples,Fruit,0.79,Gala,1 lb
 3,Milk,Dairy,2.99,Organic Valley,1 gallon
 4,Bread,Bakery,1.99,Sara Lee,1 loaf
+5,Bacon Strips,Meat,3.19,AH,300g
+6,Bacon Strips,Meat,4.59,AH,250g
+7,Pork Tenderloin,Meat,3.72,AH,225g
+8,Pork Cotlet,Meat,3.49,AH,350g
+9,Pork Schnitzel,Meat,3.61,AH,260g
+10,Beef Minced,Meat,4.99,AH,500g
+11,Beef Minced,Meat,3.69,AH,300g
+12,Beef Soup Balls,Meat,2.99,AH,250g
+13,Beef Hamburger,Meat,3.89,AH,4psc
+14,Beef Minced,Meat,9.49,AH,1kg
+15,Chicken Fillet Cubes,Meat,4.75,AH,300g
+16,Chicken Fillet Buns,Meat,4.99,AH,300g
+17,Chicken Fillet,Meat,9.49,AH,800g
+18,Chicken Schnitzel,Meat,3.09,AH,205g
+19,Chicken Strips,Meat,4.5,AH,320g
+20,Chicken Fillet,Meat,4.75,AH,300g
+21,Chicken Fillet,Meat,7.5,AH,500g
+22,Chicken Fillet Buns,Meat,6.99,AH ,500g
+23,Chicken Nugget,Meat,3,AH ,200g
+24,Salmon Smoked,Meat ,4.5,AH ,100g
+25,Salmon Fillet,Meat,5.99,AH ,170g
+26,Salmon Fillet,Meat,9.99,AH ,310g
+27,Salmon Fillet With Skin,Meat,8.29,AH ,300g
+28,Salmon Smoked,Meat,7.99,AH ,200g
+29,Fish Fingers,Meat,5.49,AH ,560g/ 20psc
+30,Salmon Fillet,Meat,16.99,AH ,580g
+31,Turkey Fillet ,Meat,4.7,AH ,250g
+32,Zucchini,Vegetable,0.82,AH,psc
+33,Paprika Red,Vegetable,0.79,AH,psc
+34,Avocado,Fruit,1.4,AH,psc
+35,Tomato Cherry,Vegetable,1.24,AH,250g
+36,Tomato Cherry,Vegetable,3,AH,500g
+37,Beans String,Vegetable,2.19,AH,400g
+38,Beans String Good,Vegetable,2.59,AH,400g
+39,Beans String,Vegetable,2.34,AH,500g
+40,Mushrooms White,Vegetable,2.29,AH,400g
+41,Mushrooms Champignions,Vegetable,1.89,AH,250g
+42,Asparagus Tips,Vegetable,3.99,AH,100g
+43,Potato French Fries,Vegetable,1.65,AH,700g
+44,Chips,Vegetable,1.69,AH,450g
+45,Bananas,Fruit,1.49,AH,bunch
+46,Mandarins,Fruit,2.85,AH,1kg
+47,Grapes White,Fruit,2.75,AH,500g
+48,Strawberies,Fruit,4,AH,400g
+49,Apples,Fruit,2.65,AH,1.5kg
+50,Pears,Fruit,2.39,AH,4psc
+51,Lemons,Fruit,1.55,AH,5psc
+52,Raspberries,Fruit,3.99,AH,225g
+53,Blueberries,Fruit,2.09,AH,150g
+54,Pineapple,Fruit,2,AH,150g
+55,Fruits Frozen,Fruit,4,AH,500g
+56,Mozzarella,Dairy,2.15,AH,125g
+57,Old Amsterdam ,Dairy,4.89,AH,8psc
+58,Salami,Meat,3,AH,120g
+59,Fuet,Meat,2.79,AH,170g
+60,Chorizo,Meat,2.5,AH,200g
+61,Milk,Dairy,2.25,AH,2L
+62,Margarine,Dairy,4,AH,500g
+63,Eggs,Dairy,4,AH,10psc
+64,,,,AH,
+65,,,,,
+66,,,,,
+67,,,,,
+68,,,,,
+69,,,,,
+70,,,,,
+71,,,,,
+72,,,,,
+73,,,,,
+74,,,,,
+75,,,,,
+76,,,,,
+77,,,,,
+78,,,,,
+79,,,,,
+80,,,,,
+81,,,,,
+82,,,,,
+83,,,,,
+84,,,,,
+85,,,,,
+86,,,,,
+87,,,,,
+88,,,,,
+89,,,,,
+90,,,,,
+91,,,,,
+92,,,,,
+93,,,,,
+94,,,,,
+95,,,,,
+96,,,,,
+97,,,,,
+98,,,,,
+99,,,,,
+100,,,,,
+101,,,,,
+102,,,,,
+103,,,,,
+104,,,,,
+105,,,,,
+106,,,,,
+107,,,,,
+108,,,,,
+109,,,,,
+110,,,,,
+111,,,,,
+112,,,,,
